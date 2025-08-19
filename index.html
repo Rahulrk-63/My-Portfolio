@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rk Rahul | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <!-- Animation on page load -->
+  <div id="animation-container" style="position: fixed; width: 100%; height: 100%; background: #fff; z-index: 9999; display: flex; justify-content: center; align-items: center;">
+    <lottie-player
+      id="lottie"
+      src="https://assets10.lottiefiles.com/packages/lf20_x62chJ.json"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px;"
+      autoplay
+    ></lottie-player>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Rk Rahul</a>
+    <nav id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <span class="nav-indicator"></span>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="rahul.jpg" alt="RK Rahul profile picture" />
+    </div>
+
+    <div class="home-content">
+      <h1>Hi, It's <span>Rk Rahul</span></h1>
+
+      <!-- Rolling role text -->
+      <h3 class="typing-text">
+        I’m a
+        <span class="roller">
+          <span class="roller-inner">
+            <span>Web Developer</span>
+            <span>Front-End Developer</span>
+            <span>Web Designer</span>
+            <span>Creative Developer</span>
+            <span>UI/UX Front-End Developer</span>
+          </span>
+        </span>
+      </h3>
+
+      <p>
+        I am a dynamic and motivated <b>Information Science & Engineering student</b>, eager to apply my knowledge and skills in a professional, growth-focused environment. I enjoy building modern, responsive, and user-friendly websites, and I’m always excited to learn and contribute to impactful projects.
+      </p>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/rk-rahul-0a6114320/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Rahulrk-63" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a  href="mailto:rahulrkchawhan@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://instagram.com/rahulrk63" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <div class="skills-container">
+      <div class="skill"><h3>Java</h3><div class="progress-bar"><span style="--final-width: 100%"></span></div></div>
+      <div class="skill"><h3>Python</h3><div class="progress-bar"><span style="--final-width: 95%"></span></div></div>
+      <div class="skill"><h3>C / C++</h3><div class="progress-bar"><span style="--final-width: 95%"></span></div></div>
+      <div class="skill"><h3>SQL</h3><div class="progress-bar"><span style="--final-width: 95%"></span></div></div>
+      <div class="skill"><h3>HTML / CSS</h3><div class="progress-bar"><span style="--final-width: 100%"></span></div></div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education" id="education">
+    <h2 class="heading">My <span>Education</span></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>🎓 B.E. in Information Science & Engineering</h3>
+        <span>Sapthagiri College of Engineering, Bengaluru | 2021 – 2025</span>
+        <p>Completed Bachelor’s degree in July 2025 with a <b>CGPA of 7.21</b>. Gained strong fundamentals in programming, data structures, databases, and software development.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🏫 Pre-University (12th Grade)</h3>
+        <span>National PU College, Karnataka | 2019 – 2021</span>
+        <p>Completed PU with a <b>73.33%</b>. Focused on science and mathematics, which strengthened problem-solving and logical thinking skills.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>📘 SSLC (10th Grade)</h3>
+        <span>National High School, Karnataka | 2018 – 2019</span>
+        <p>Achieved <b>77.60%</b> in State Board examinations, building a strong academic foundation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>🎬 Movie Ticket Booking System</h3>
+        <span>PHP | Mini Project</span>
+        <p>Designed a movie ticket booking platform where users can view movies, book seats, and manage bookings.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🔐 Biometric Security with Iris Watermarking</h3>
+        <span>Python | Security Project</span>
+        <p>Developed a biometric authentication system using iris-based watermarking and encryption methods.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🌱 Crop Recommendation System</h3>
+        <span>Python + AIML</span>
+        <p>Built a machine learning model that recommends crops based on soil type, climate conditions, and historical yield data.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>💳 Loan Sanction Prediction</h3>
+        <span>Machine Learning | Logistic Regression</span>
+        <p>Created a predictive model to analyze applicant data and classify loan eligibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <h2 class="heading">My <span>Experience</span></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>💼 Cybersecurity Analyst Intern – TATA</h3>
+        <span>2024</span>
+        <p>Worked on Identity & Access Management fundamentals during a cybersecurity job simulation program.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>💻 Skills Build Intern – IBM</h3>
+        <span>2024</span>
+        <p>Completed a 2-week internship on job readiness, IT fundamentals, and hands-on learning modules provided by IBM.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🖥️ Front-End Intern – Bharat Electronics Ltd</h3>
+        <span>2023</span>
+        <p>Contributed to an offline image detection project. Designed and developed responsive front-end interfaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+    // Remove animation after 3 seconds
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('animation-container').style.display = 'none';
+      }, 3000); // 3 seconds
+    });
+
+    // Smooth underline indicator under active nav link
+    const indicator = document.querySelector('.nav-indicator');
+    const navLinks = document.querySelectorAll('#navbar a');
+
+    function updateIndicator(el) {
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const navRect = el.parentElement.getBoundingClientRect();
+      indicator.style.width = rect.width + "px";
+      indicator.style.left = (rect.left - navRect.left) + "px";
+    }
+
+    window.addEventListener('load', () => {
+      updateIndicator(document.querySelector('#navbar a.active'));
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        updateIndicator(link);
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const fromTop = window.scrollY + 120;
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section && section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+          updateIndicator(link);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
