@@ -35,21 +35,14 @@ span{ color:#b74b4b; }
 
 /* Rolling “I'm a …” */
 .typing-text{
-  --line: 4.6rem;               /* line height used everywhere below */
+  --line: 4.6rem;
   font-size:3.4rem; font-weight:600; display:flex; align-items:center; gap:1rem;
   height:var(--line); overflow:hidden;
 }
-.roller{
-  display:inline-block; height:var(--line); overflow:hidden; color:#b74b4b;
-}
-.roller-inner{
-  display:block; will-change:transform; animation:rollWords 12s infinite;
-}
-.roller-inner > span{
-  display:block; height:var(--line); line-height:var(--line);
-}
+.roller{ display:inline-block; height:var(--line); overflow:hidden; color:#b74b4b; }
+.roller-inner{ display:block; will-change:transform; animation:rollWords 12s infinite; }
+.roller-inner > span{ display:block; height:var(--line); line-height:var(--line); }
 
-/* Smooth vertical roll using the same --line height each step */
 @keyframes rollWords{
   0%, 15%   { transform: translateY(0); }
   20%, 35%  { transform: translateY(calc(-1 * var(--line))); }
@@ -66,7 +59,7 @@ span{ color:#b74b4b; }
 }
 @keyframes floatImage{
   0%{ transform:translateY(0); }
-  50%{ transform:translateY(-20px); }
+  50%{ transform:translateY(-10px); }
   100%{ transform:translateY(0); }
 }
 
@@ -89,7 +82,15 @@ span{ color:#b74b4b; }
 
 /* Skills */
 .skills-container{ max-width:800px; margin:auto; }
-.skill{ margin-bottom:2rem; }
+.skill{
+  margin-bottom:2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill:hover {
+  transform: scale(1.1); /* zoom effect */
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
 .skill h3{ font-size:2rem; margin-bottom:.5rem; }
 .progress-bar{ background:#222; border-radius:2rem; overflow:hidden; height:20px; }
 .progress-bar span{
@@ -98,21 +99,97 @@ span{ color:#b74b4b; }
 @keyframes fillBar{ from{ width:0; } to{ width:var(--final-width); } }
 
 /* Timeline (Education, Projects, Experience) */
-.timeline{ max-width:800px; margin:auto; border-left:3px solid #b74b4b; padding-left:2rem; }
-.timeline-item{ margin-bottom:3rem; position:relative; }
+.timeline{ max-width:600px; margin:auto; border-left:3px solid #b74b4b; padding-left:2rem; }
+.timeline-item{
+  margin-bottom:3rem; position:relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .timeline-item::before{
   content:""; position:absolute; left:-1.1rem; top:0; width:20px; height:20px; background:#b74b4b; border-radius:50%; animation:pulse 1.5s infinite;
+}
+.timeline-item:hover {
+  transform: scale(1.05); /* zoom effect */
+  z-index: 5;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 .timeline-item h3{ font-size:2.5rem; margin-bottom:.5rem; }
 .timeline-item span{ font-size:1.4rem; color:#aaa; display:block; margin-bottom:1rem; }
 .timeline-item p{ font-size:1.6rem; }
 @keyframes pulse{ 0%{ transform:scale(1); opacity:1; } 50%{ transform:scale(1.5); opacity:.6; } 100%{ transform:scale(1); opacity:1; } }
 
-/* Responsive */
-@media (max-width:1000px){ .home{ gap:4rem; } }
-@media (max-width:995px){
-  .home{ flex-direction:column; margin:5rem 4rem; }
-  .home .home-content h1{ font-size:5rem; }
-  .typing-text{ --line:4.2rem; font-size:2.8rem; }
-  .home-img img{ width:70vw; margin-top:4rem; }
+
+/* ====== Certificates Section ====== */
+#certificates {
+  background: #000;
+  padding: 60px 20px;
+  text-align: center;
+  color: #000;
 }
+
+#certificates .heading {
+  color: #fcf3f3;
+  margin-bottom: 40px;
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.certificate {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 270px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* ✅ Certificates – keep small hover effect */
+.certificate:hover {
+  transform: scale(2.05);
+  z-index: 5;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+/* ====== Skills, Education & Experience ====== */
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-item::before {
+  content:"";
+  position:absolute;
+  left:-1.1rem;
+  top:0;
+  width:20px;
+  height:20px;
+  background:#b74b4b;
+  border-radius:50%;
+  animation:pulse 1.5s infinite;
+}
+
+/*On hover: Expand slightly with glow */
+.timeline-item:hover {
+  transform: scale(1.1); /* reduced zoom */
+  z-index: 10;
+  box-shadow: 0 0 30px #b74b4b; /* glowing effect like icons */
+}
+
+

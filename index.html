@@ -6,20 +6,10 @@
   <title>Rk Rahul | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 </head>
 <body>
-  <!-- Animation on page load -->
-  <div id="animation-container" style="position: fixed; width: 100%; height: 100%; background: #fff; z-index: 9999; display: flex; justify-content: center; align-items: center;">
-    <lottie-player
-      id="lottie"
-      src="https://assets10.lottiefiles.com/packages/lf20_x62chJ.json"
-      background="transparent"
-      speed="1"
-      style="width: 300px; height: 300px;"
-      autoplay
-    ></lottie-player>
-  </div>
-
   <!-- Header -->
   <header>
     <a href="#" class="logo">Rk Rahul</a>
@@ -29,6 +19,7 @@
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#certificates ">certificates </a>
       <span class="nav-indicator"></span>
     </nav>
   </header>
@@ -67,9 +58,10 @@
         <a href="https://instagram.com/rahulrk63" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
       </div>
 
-      <a href="#contact" class="btn">Hire Me</a>
+      <a href="https://drive.google.com/file/d/14uubMLmUOkAWCUPTtsJuH2hnTAtshyQC/view?usp=drive_link" class="btn">Hire Me</a>
     </div>
   </section>
+  
 
   <!-- Skills -->
   <section class="skills" id="skills">
@@ -153,6 +145,50 @@
       </div>
     </div>
   </section>
+<!-- Certificates Section -->
+<section id="certificates">
+  <h2 class="heading">My <span>Certificates</span></h2>
+  <div class="certificates-container">
+    <div class="certificate">
+      <img src="certificate1.jpg" alt="Certificate 1">
+    </div>
+    <div class="certificate">
+      <img src="certificate2.jpg" alt="Certificate 2">
+    </div>
+    <div class="certificate">
+      <img src="certificate3.jpg" alt="Certificate 3">
+    </div>
+    <div class="certificate">
+      <img src="certificate4.jpg" alt="Certificate 4">
+    </div>
+    <div class="certificate">
+      <img src="certificate5.jpg" alt="Certificate 5">
+    </div>
+  </div>
+</section>
+#flying-character {
+      position: fixed;
+      font-size: 40px;
+      cursor: pointer;
+      animation: flyAround 15s linear infinite alternate;
+      z-index: 9999;
+    }
+
+    @keyframes flyAround {
+      0%   { top: 10%; left: 10%; transform: rotate(0deg) scale(1); }
+      25%  { top: 20%; left: 70%; transform: rotate(20deg) scale(1.1); }
+      50%  { top: 70%; left: 50%; transform: rotate(-20deg) scale(1.2); }
+      75%  { top: 40%; left: 80%; transform: rotate(10deg) scale(1.1); }
+      100% { top: 60%; left: 20%; transform: rotate(-10deg) scale(1); }
+    }
+
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+</footer>
+
+  
 
   <!-- Scripts -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -200,5 +236,7 @@
       });
     });
   </script>
+  <!-- Link JS -->
+<script src="script.js"></script>
 </body>
 </html>
